@@ -53,10 +53,6 @@ TARGET_SCREEN_WIDTH := 720
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
 
-# Ambient display
-PRODUCT_PACKAGES += \
-    XiaomiDoze
-
 # ANT+
 PRODUCT_PACKAGES += \
     AntHalService \
@@ -146,6 +142,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth.a2dp@1.0-impl \
     android.hardware.bluetooth.a2dp@1.0-service
+
+# Device-specific settings
+PRODUCT_PACKAGES += \
+    XiaomiParts
 
 # DRM
 PRODUCT_PACKAGES += \
