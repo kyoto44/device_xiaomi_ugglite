@@ -1,0 +1,3 @@
+add_lunch_combo arrow_ugglite-eng
+add_lunch_combo arrow_ugglite-user
+add_lunch_combo arrow_ugglite-userdebug

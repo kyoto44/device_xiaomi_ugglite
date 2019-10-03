@@ -21,15 +21,15 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_n.mk)
 
 # Inherit some common Lineage stuff
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/arrow/config/common.mk)
 
 # Inherit from ugglite device
 $(call inherit-product, device/xiaomi/ugglite/device.mk)
 
-PRODUCT_NAME := lineage_ugglite
+PRODUCT_NAME := arrow_ugglite
 PRODUCT_DEVICE := ugglite
 PRODUCT_MODEL := Redmi Note 5A
-PRODUCT_BRAND := xiaomi
+PRODUCT_BRAND := Xiaomi
 PRODUCT_MANUFACTURER := Xiaomi
 TARGET_VENDOR_PRODUCT_NAME := ugglite
 
@@ -47,3 +47,4 @@ PRIVATE_BUILD_DESC="ugglite-user 7.1.2 N2G47H V9.1.2.0.NDFMIEI release-keys"
 
 # Set BUILD_FINGERPRINT variable
 BUILD_FINGERPRINT := "Xiaomi/ugglite/ugglite:7.1.2/N2G47H/V9.1.2.0.NDFMIEI:user/release-keys"
+
