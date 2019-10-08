@@ -50,6 +50,7 @@ BUILD_FINGERPRINT := "Xiaomi/ugglite/ugglite:7.1.2/N2G47H/V9.1.2.0.NDFMIEI:user/
 
 # Bootanimation
 TARGET_BOOT_ANIMATION_RES := 720
+TARGET_BOOT_ANIMATION_RES_EVO := true
 
 # Pixel Experience
 TARGET_GAPPS_ARCH := arm64
