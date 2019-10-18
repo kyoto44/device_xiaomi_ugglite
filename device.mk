@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-$(call inherit-product, vendor/xiaomi/rolex/rolex-vendor.mk)
+$(call inherit-product, vendor/xiaomi/ugglite/ugglite-vendor.mk)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
@@ -103,7 +103,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/sound_trigger_mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sound_trigger_mixer_paths.xml \
     $(LOCAL_PATH)/audio/sound_trigger_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sound_trigger_platform_info.xml \
     $(LOCAL_PATH)/audio/audio_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info.xml \
-    $(LOCAL_PATH)/audio/mixer_paths_qrd_sku2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_qrd_sku2.xml
+    $(LOCAL_PATH)/audio/mixer_paths_mtp.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_mtp.xml \
 
 # Additional native libraries
 PRODUCT_COPY_FILES += \
@@ -122,17 +122,11 @@ PRODUCT_PACKAGES += \
 # Camera
 PRODUCT_PACKAGES += \
     camera.msm8937 \
-    libmm-qcamera \
-    libshim_libmmcamera \
     Snap
 
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service
-
-# Camera Shim
-TARGET_LD_SHIM_LIBS += \
-    /system/vendor/lib/libmmcamera_ppeiscore.so|libshim_libmmcamera.so
 
 # Configstore
 PRODUCT_PACKAGES += \
@@ -220,7 +214,7 @@ PRODUCT_PACKAGES += \
 
 # Input
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/keylayout/ft5346.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/ft5346.kl \
+    $(LOCAL_PATH)/keylayout/fts_ts.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/fts_ts.kl \
     $(LOCAL_PATH)/keylayout/goodix-ts.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/goodix-ts.kl \
     $(LOCAL_PATH)/keylayout/gpio-keys.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/gpio-keys.kl \
     $(LOCAL_PATH)/keylayout/msm8920-sku7-snd-card_Button_Jack.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/msm8920-sku7-snd-card_Button_Jack.kl \
@@ -295,7 +289,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/perf/targetresourceconfigs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/targetresourceconfigs.xml
 
 # Properties
--include device/xiaomi/rolex/vendor_prop.mk
+-include device/xiaomi/ugglite/vendor_prop.mk
 
 # Qualcomm
 PRODUCT_COPY_FILES += \
@@ -330,24 +324,6 @@ PRODUCT_PACKAGES += \
     init.qcom.early_boot.sh \
     move_time_data.sh \
     move_wifi_data.sh
-
-# Releasetools
-TARGET_RELEASETOOLS_EXTENSIONS := device/xiaomi/rolex
-
-# Ship Miui Firmware
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/firmware/adspso.bin:install/firmware-update/adspso.bin \
-    $(LOCAL_PATH)/firmware/cmnlib64.mbn:install/firmware-update/cmnlib64.mbn \
-    $(LOCAL_PATH)/firmware/cmnlib.mbn:install/firmware-update/cmnlib.mbn \
-    $(LOCAL_PATH)/firmware/devcfg.mbn:install/firmware-update/devcfg.mbn \
-    $(LOCAL_PATH)/firmware/emmc_appsboot.mbn:install/firmware-update/emmc_appsboot.mbn \
-    $(LOCAL_PATH)/firmware/keymaster.mbn:install/firmware-update/keymaster.mbn \
-    $(LOCAL_PATH)/firmware/lksecapp.mbn:install/firmware-update/lksecapp.mbn \
-    $(LOCAL_PATH)/firmware/NON-HLOS.bin:install/firmware-update/NON-HLOS.bin \
-    $(LOCAL_PATH)/firmware/rpm.mbn:install/firmware-update/rpm.mbn \
-    $(LOCAL_PATH)/firmware/sbl1.mbn:install/firmware-update/sbl1.mbn \
-    $(LOCAL_PATH)/firmware/tz.mbn:install/firmware-update/tz.mbn \
-    $(LOCAL_PATH)/firmware/splash.img:install/firmware-update/splash.img
 
 # RenderScript HAL
 PRODUCT_PACKAGES += \

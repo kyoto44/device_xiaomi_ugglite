@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/xiaomi/rolex
+DEVICE_PATH := device/xiaomi/ugglite
 
 # Architecture
 TARGET_ARCH := arm64
@@ -45,7 +45,7 @@ BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 BOARD_KERNEL_PAGESIZE :=  2048
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01000000 --tags_offset 0x00000100
 TARGET_KERNEL_ARCH := arm64
-TARGET_KERNEL_CONFIG := rolex_defconfig
+TARGET_KERNEL_CONFIG := ugglite_defconfig
 TARGET_KERNEL_SOURCE := kernel/xiaomi/msm8917
 TARGET_COMPILE_WITH_MSM_KERNEL := true
 
@@ -101,8 +101,6 @@ TARGET_USES_QTI_CAMERA_DEVICE := true
 USE_DEVICE_SPECIFIC_CAMERA := true
 BOARD_QTI_CAMERA_32BIT_ONLY := true
 TARGET_TS_MAKEUP := true
-TARGET_PROCESS_SDK_VERSION_OVERRIDE := \
-    /vendor/bin/mm-qcamera-daemon=25
 
 # Charger
 BOARD_CHARGER_ENABLE_SUSPEND := true
@@ -113,7 +111,7 @@ BOARD_USES_QCNE := true
 
 # Crypto
 TARGET_HW_DISK_ENCRYPTION := true
-TARGET_CRYPTFS_HW_PATH ?= vendor/qcom/opensource/cryptfs_hw
+TARGET_CRYPTFS_HW_PATH := vendor/qcom/opensource/cryptfs_hw
 
 # Dexpreopt
 ifeq ($(HOST_OS),linux)
@@ -249,4 +247,4 @@ WIFI_DRIVER_FW_PATH_P2P := "p2p"
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # Inherit from the proprietary version
--include vendor/xiaomi/rolex/BoardConfigVendor.mk
+-include vendor/xiaomi/ugglite/BoardConfigVendor.mk
