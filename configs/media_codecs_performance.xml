@@ -31,5 +31,5 @@
                 <Limit name="measured-frame-rate-176x144" range="200-200" />
             </Type>
          </MediaCodec>
-    </Decoders>
+    </Encoders>
 </MediaCodecs>

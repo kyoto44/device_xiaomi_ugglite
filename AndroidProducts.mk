@@ -14,4 +14,8 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_rolex.mk
+    $(LOCAL_DIR)/lineage_ugglite.mk
+
+COMMON_LUNCH_CHOICES := \
+    lineage_ugglite-userdebug \
+    lineage_ugglite-user

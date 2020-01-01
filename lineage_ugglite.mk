@@ -23,22 +23,22 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_m.mk)
 # Inherit some common Lineage stuff
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-# Inherit from rolex device
+# Inherit from ugglite device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
 PRODUCT_BRAND := Xiaomi
-PRODUCT_DEVICE := rolex
+PRODUCT_DEVICE := ugglite
 PRODUCT_MANUFACTURER := Xiaomi
-PRODUCT_MODEL := Redmi 4A
-PRODUCT_NAME := lineage_rolex
+PRODUCT_MODEL := Redmi Note 5A Lite
+PRODUCT_NAME := lineage_ugglite
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
-TARGET_VENDOR_PRODUCT_NAME := rolex
+TARGET_VENDOR_PRODUCT_NAME := ugglite
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    TARGET_DEVICE="rolex" \
-    PRODUCT_NAME="rolex" \
-    PRIVATE_BUILD_DESC="rolex-user 7.1.2 N2G47H V9.2.6.0.NCCMIEK release-keys"
+    TARGET_DEVICE="ugglite" \
+    PRODUCT_NAME="ugglite" \
+    PRIVATE_BUILD_DESC="ugglite-user 7.1.2 N2G47H V9.1.2.0.NDFMIEI release-keys"
 
-BUILD_FINGERPRINT := Xiaomi/rolex/rolex:7.1.2/N2G47H/V9.2.6.0.NCCMIEK:user/release-keys
+BUILD_FINGERPRINT := "Xiaomi/ugglite/ugglite:7.1.2/N2G47H/V9.1.2.0.NDFMIEI:user/release-keys"
