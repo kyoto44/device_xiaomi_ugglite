@@ -15,6 +15,10 @@
 # limitations under the License.
 #
 
+PRODUCT_SOONG_NAMESPACES += \
+    device/xiaomi/rolex \
+    vendor/xiaomi
+
 DEVICE_PATH := device/xiaomi/ugglite
 
 # Installs gsi keys into ramdisk, to boot a GSI with verified boot.
