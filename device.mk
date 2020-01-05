@@ -16,7 +16,7 @@
 #
 
 PRODUCT_SOONG_NAMESPACES += \
-    device/xiaomi/rolex \
+    device/xiaomi/ugglite \
     vendor/xiaomi
 
 DEVICE_PATH := device/xiaomi/ugglite
