@@ -20,16 +20,22 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_n.mk)
 
-# Inherit some common Lineage stuff
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common Aosip stuff
+$(call inherit-product, vendor/aosip/config/common_full_phone.mk)
+
+TARGET_GAPPS_ARCH := arm64
+TARGET_BOOT_ANIMATION_RES := 720
+TARGET_MINIMAL_APPS := true
+IS_PHONE := true
+AOSIP_BUILDTYPE := Unofficial
 
 # Inherit from ugglite device
 $(call inherit-product, device/xiaomi/ugglite/device.mk)
 
-PRODUCT_NAME := lineage_ugglite
+PRODUCT_NAME := derp_ugglite
 PRODUCT_DEVICE := ugglite
 PRODUCT_MODEL := Redmi Note 5A
-PRODUCT_BRAND := xiaomi
+PRODUCT_BRAND := Xiaomi
 PRODUCT_MANUFACTURER := Xiaomi
 TARGET_VENDOR_PRODUCT_NAME := ugglite
 
