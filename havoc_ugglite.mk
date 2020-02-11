@@ -1,6 +1,6 @@
 #
 # Copyright (C) 2016 The CyanogenMod Project
-#               2017-2019 The LineageOS Project
+#               2017-2019 The havocOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -20,13 +20,13 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_n.mk)
 
-# Inherit some common Lineage stuff
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common havoc stuff
+$(call inherit-product, vendor/havoc/config/common_full_phone.mk)
 
 # Inherit from ugglite device
 $(call inherit-product, device/xiaomi/ugglite/device.mk)
 
-PRODUCT_NAME := lineage_ugglite
+PRODUCT_NAME := havoc_ugglite
 PRODUCT_DEVICE := ugglite
 PRODUCT_MODEL := Redmi Note 5A
 PRODUCT_BRAND := Xiaomi
