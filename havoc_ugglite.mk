@@ -42,3 +42,9 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 
 # Set BUILD_FINGERPRINT variable
 BUILD_FINGERPRINT := "xiaomi/ugglite/ugglite:7.1.2/N2G47H/V9.1.2.0.NDFMIEI:user/release-keys"
+
+# Havoc
+export export HAVOC_BUILD_TYPE=Official
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.havoc.maintainer=kyoto44
