@@ -17,13 +17,9 @@
 
 PRODUCT_SOONG_NAMESPACES += \
     device/xiaomi/ugglite \
-    vendor/xiaomi/ugglite \
-    vendor/xiaomi/msm8937-common
+    vendor/xiaomi
 
 DEVICE_PATH := device/xiaomi/ugglite
-
-# Installs gsi keys into ramdisk, to boot a GSI with verified boot.
-$(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
